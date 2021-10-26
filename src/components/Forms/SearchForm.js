@@ -8,7 +8,7 @@ function SearchForm({handleSingleSearch}){
         <Row>
             <Col s={8} className='offset-s2'>
                 <p>search by coin name</p>
-            <input type='text' value={coinInput} onChange={(e)=>{setCInput(e.target.value)}} />
+            <input id='searchIn' type='text' value={coinInput} onChange={(e)=>{setCInput(e.target.value)}} />
             <button id='search' onClick={()=>{handleSingleSearch(coinInput)}}>Search</button>
             </Col>
         </Row>

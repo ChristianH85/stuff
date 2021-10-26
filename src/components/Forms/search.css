@@ -2,5 +2,12 @@
     background-color:#569e0e;
     color: #fff;
     width:60%;
-    
+}
+#searchIn{
+    color: #fff;
+    font-weight: bold;
+    font-size:1.25em;
+    background-color:#7e7e7e;
+    border-radius: 15px;
+    padding-left:.5em;
 }
