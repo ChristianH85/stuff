@@ -1,5 +1,5 @@
 body{
-  background-color:#313131;
+  background:url('./bubbles.gif');
 }
 button{
     margin:auto;
@@ -8,7 +8,7 @@ button{
 }
 .App {
   text-align: center;
-  background-color:rgb(49, 49, 49);
+  /* background-color:rgb(49, 49, 49); */
   color:#fff
 }
 .crypto{

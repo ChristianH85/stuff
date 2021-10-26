@@ -21,7 +21,7 @@ return(
     <Row>
         <Col s={12} m={6}className='offset-m3'>
             {info?
-                <div>
+                <div id='info'>
                     {info.name?<h5>Coin Name: {info.name}</h5>:null}
                     {info.current_price?<h6>Coin Price: {info.current_price}</h6>:null}
                     {info.price_change_24h?<h6>24hr change: {info.price_change_24h}</h6>:null}

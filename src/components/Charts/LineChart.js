@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import {Line} from 'react-chartjs-2';
 // import { saveAs } from 'file-saver';
-// import './charts.css'
+import './charts.css'
 
 function LineChart ({chData}){
     const [points,setPts]=useState('')
@@ -48,12 +48,12 @@ function LineChart ({chData}){
           },
           title: {
             display: true,
-            text: 'us vs them',
+            text: 'Price',
           },
         },
       };
     return(
-            <div className='col s12 m6 '>
+            <div className='col s12 m6 chart'>
                 <Line id='myLine' data={data} options={options}/> 
             </div>
 
