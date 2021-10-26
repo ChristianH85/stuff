@@ -1,10 +1,12 @@
 #ath{
-    background-color:#0b3f0b;
+    background-color:#097509;
     color: #fff;
+    border-radius: 15px;
 }
 #atl{
-    background-color:#631f13;
+    background-color:#aa270f;
     color: #fff;
+    border-radius: 15px;
 }
 #saveBtn{
     background-color:#ee8a17;
