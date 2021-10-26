@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <SearchForm handleSingleSearch={handleSingleSearch} />
       
-      {info?<Info info={info}/>:null}
+      {info?<Info setClist={setCList} info={info}/>:null}
       {info.sparkline_in_7d? <LineChart chData={info.sparkline_in_7d.price}/>:null}
       {cList?cList.map((crypto,i)=>{
         return(

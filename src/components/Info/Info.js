@@ -1,7 +1,7 @@
 import React from 'react';
 import{Row,Col} from 'react-materialize'
 import './info.css'
-function Info({info}){
+function Info({info,setClist}){
     console.log(info)
     const handleSave=()=>{
         let cryptos=JSON.parse(localStorage.getItem('cryptos'))
@@ -9,10 +9,12 @@ function Info({info}){
         if(!cryptos){
             let cList=JSON.stringify([info])
             localStorage.setItem('cryptos', cList)
+            setClist(JSON.parse(cList))
         }
         else{
             cryptos.push(info)
             localStorage.setItem('cryptos', JSON.stringify(cryptos))
+            setClist(cryptos)
         }
     }
 return(
