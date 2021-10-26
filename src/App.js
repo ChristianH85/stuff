@@ -1,23 +1,24 @@
+import React , { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Api from './apiFunc/api'
+import SearchForm from './components/Forms/SearchForm';
+import Info from './components/Info/Info';
+import LineChart from './components/Charts/LineChart';
 function App() {
+  const[info,setInfo]=useState('')
+  // useEffect(()=>{
+    
+  // },[])
+  const handleSingleSearch= async(query)=>{
+   let results= await Api.searchCrypto(query)
+   setInfo(results.data[0])
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchForm handleSingleSearch={handleSingleSearch} />
+      {info?<Info info={info}/>:null}
+      {info.sparkline_in_7d? <LineChart chData={info.sparkline_in_7d.price}/>:null}
     </div>
   );
 }
